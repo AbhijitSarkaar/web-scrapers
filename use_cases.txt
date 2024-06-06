@@ -1,0 +1,10 @@
+- https://books.toscrape.com/
+    - Pagination 
+    - Pipelines 
+- https://quotes.toscrape.com/scroll
+    - Infinite scroll
+- https://quotes.toscrape.com/tableful/
+    - Tabular data
+- https://quotes.toscrape.com/search.aspx/
+    - Form submission 
+    - POST requests
