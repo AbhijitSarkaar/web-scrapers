@@ -1,0 +1,16 @@
+open google console 
+    - create a new project 
+    - create credentials
+        - create a service account 
+        - create a private key  
+        - enable google drive api access and google sheets api access 
+
+google sheet 
+    - create a google sheet
+    - share it with the email listed in the private credentials in service account key json file 
+
+
+
+install pygsheets and pandas 
+load the credentials file from the local system 
+
