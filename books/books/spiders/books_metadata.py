@@ -1,5 +1,5 @@
 import scrapy
-
+import logging
 
 class BooksMetadataSpider(scrapy.Spider):
     name = "books_metadata"
@@ -13,11 +13,18 @@ class BooksMetadataSpider(scrapy.Spider):
             link = book.xpath("./article/h3/a/@href").get()
             yield response.follow(url=link, callback=self.parse_book)
         
-        next_page = response.xpath("//ul[@class='pager']/li[@class='next']/a/@href").get()
-        yield response.follow(url=next_page, callback=self.parse)
+        # next_page = response.xpath("//ul[@class='pager']/li[@class='next']/a/@href").get()
+        # yield response.follow(url=next_page, callback=self.parse)
         
     
     def parse_book(self, response):
+
+        logging.log(logging.INFO, 'logging.INFO')
+        logging.log(logging.ERROR, 'logging.ERROR')
+        logging.log(logging.WARNING, 'logging.WARNING')
+        logging.log(logging.CRITICAL, 'logging.CRITICAL')
+        logging.log(logging.DEB, 'logging.DEB')
+        
         
         yield {
             "title": response.xpath("//div[@class='col-sm-6 product_main']/h1/text()").get(),
